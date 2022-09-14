@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Details</title>
+    <link rel="stylesheet" href="gen_validatorv4.js">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: #2b4f81;
+    }
+    .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            transform: translate(-50%,-50%);
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: -webkit-box-shadow: 10px 10px 25px -4px rgba(0,0,0,0.45);
+                            -moz-box-shadow: 10px 10px 25px -4px rgba(0,0,0,0.45);
+                        box-shadow: 10px 10px 25px -4px rgba(0,0,0,0.75);
+        }
+        .container h1{
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(0, 0, 0, 0.726);
+        }
+        
+        
+
+        input[type="text"], textarea{
+            border: 1.5px solid rgba(83, 83, 83, 0.692);
+            padding: 10px;
+            border-radius: 5px;
+         }
+         input.fail{
+             border: 2px solid orangered;
+         }
+         .container textarea{
+             height: 150px;
+             width: 100%;
+             resize: none;
+         }
+         .container input[type="date"]{
+
+             padding: 5px;
+             border: solid 1.5px rgba(83, 83, 83, 0.692);
+             border-radius: 5px;
+            
+         }
+         .container input[type="time"]{
+            padding: 5px;
+            border: solid 1.5px rgba(83, 83, 83, 0.692);
+            border-radius: 5px;
+    
+         }
+         .n input{
+             width: 49%;             
+         }
+         .n{
+            display: flex;
+             justify-content: space-between;
+         }
+         .mail input{
+             width: 100%;
+         }
+         .gen input{
+             width: 8%;
+         }
+         .ph input{
+             width: 100%;
+         }
+         .ernam,.ermail,.errad,.erph,.erdate,.ertime,.ermsg{padding: 5px;color: red; height: 30px;}
+         h4{margin-top: 8px;
+         margin-bottom: 5px;}
+         .container .btn input[type="submit"]{
+             border: 0;
+             padding: 10px;
+            width: 80%;
+            margin-left: 10%;
+             background-color:#2b4f81 ;
+             color: white;
+             text-transform: uppercase;
+             letter-spacing: 5px;
+             font-weight: bold;
+             cursor: pointer;
+         }
+         .main{
+             display: flex;
+             justify-content: space-around;
+         }
+         .left,.right{width: 50%;}
+         .left{
+             padding: 20px;
+         }
+         .right{
+             padding: 20px;
+         }
+         .bottom{
+            width: 60%;
+             margin-left: 20%;
+         }
+         input.success{
+             border: solid 2px rgb(22, 206, 22);
+         }
+         .ernam{
+             width: 100%;
+             display: flex;
+             justify-content: space-between;
+         }
+         .ernam #fn{
+             width: 49%;
+         }
+         .ernam #ln{
+             width: 49%;
+         }
+         #erph{
+            color: orangered;
+            padding: 10px;
+         }
+         #ermail{
+            color: orangered;
+            padding: 5px;
+         }
+         #ermsg{
+            color: orangered;
+            padding: 5px;
+         }
+         #errad{
+            color: orangered;
+            padding: 5px;
+         }
+         textarea.success{
+            border: solid 2px rgb(22, 206, 22);
+         }
+         textarea.fail{
+            border: 2px solid orangered;
+         }
+</style>
+<script>
+    function checkfn(){
+        strRegExp = /^[A-Za-z]+$/;
+        val=document.getElementById("name1").value.trim();
+        input=document.getElementById("name1");
+
+        if(document.getElementById("name1").value.trim().length == 0){
+           input.classList.add("fail");
+           input.classList.remove("success");
+            document.getElementById("fn").innerHTML="Field cannot be Empty";
+        }
+            else if(!val.match(strRegExp)){
+               input.classList.remove("success");
+            input.classList.add("fail");
+            document.getElementById("fn").innerHTML = "Only Alphabets";
+            }
+        else{
+            input.classList.remove("fail");
+            input.classList.add("success");
+            document.getElementById("fn").innerHTML="";
+
+        }
+           
+    
+    }
+    function checkln(){
+        strRegExp = /^[A-Za-z]+$/;
+        val=document.getElementById("name2").value.trim();
+        input=document.getElementById("name2");
+
+        if(document.getElementById("name2").value.trim().length == 0){
+           input.classList.add("fail");
+           input.classList.remove("success");
+            document.getElementById("ln").innerHTML="Field cannot be Empty";
+        }
+            else if(!val.match(strRegExp)){
+               input.classList.remove("success");
+            input.classList.add("fail");
+            document.getElementById("ln").innerHTML = "Only Alphabets";
+            }
+        else{
+            input.classList.remove("fail");
+            input.classList.add("success");
+            document.getElementById("ln").innerHTML="";
+        }
+    }
+    function checkmail(){
+        strRegExp = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
+        val=document.getElementById("mail").value.trim();
+        input=document.getElementById("mail");
+
+        if(document.getElementById("mail").value.trim().length == 0){
+           input.classList.add("fail");
+           input.classList.remove("success");
+            document.getElementById("ermail").innerHTML="Field cannot be Empty";
+        }
+            else if(!val.match(strRegExp)){
+               input.classList.remove("success");
+            input.classList.add("fail");
+            document.getElementById("ermail").innerHTML = "Incorrect Format";
+            }
+        else{
+            input.classList.remove("fail");
+            input.classList.add("success");
+            document.getElementById("ermail").innerHTML="";
+        }
+    }
+
+    function checkphone(){
+        strRegExp = /^[0-9]+$/;
+        val=document.getElementById("phone").value.trim();
+        input=document.getElementById("phone");
+
+        if(document.getElementById("phone").value.trim().length == 0){
+           input.classList.add("fail");
+           input.classList.remove("success");
+            document.getElementById("erph").innerHTML="Field cannot be Empty";
+        }
+            else if(!val.match(strRegExp)){
+               input.classList.remove("success");
+            input.classList.add("fail");
+            document.getElementById("erph").innerHTML = "Only Numbers";
+            }
+        else{
+            input.classList.remove("fail");
+            input.classList.add("success");
+            document.getElementById("erph").innerHTML="";
+        }
+    }
+    function checkmsg(){
+        val=document.getElementById("msg").value.trim();
+        input=document.getElementById("msg");
+        if(document.getElementById("msg").value.trim().length == 0){
+           input.classList.add("fail");
+           input.classList.remove("success");
+            document.getElementById("ermsg").innerHTML="Field cannot be Empty";
+        }
+        else{
+            input.classList.remove("fail");
+            input.classList.add("success");
+            document.getElementById("ermsg").innerHTML="";
+        }
+    }
+     function checkrad(){
+         var r1=document.getElementById("r1");
+         var r2=document.getElementById("r2");
+        if(r1.checked==false&&r2.checked==false){
+            document.getElementById("errad").innerHTML="Select any one";
+        }
+        else{
+            document.getElementById("errad").innerHTML="";
+        }
+     }
+    function allfunc(){
+        checkfn();
+        checkln();
+        checkmail();
+        checkrad();
+        checkphone();
+        checkmsg();
+    }
+</script>
+<body>
+    <div class="container">
+        <h1>Tutor details</h1>
+        <br>
+        <form id="myform" action="https://www.google.com">
+            <div class="main">
+                <div class="left">
+                    <div class="name">
+                        <h4>FULL NAME</h4>
+                        <div class="n">
+                        <input type="text" placeholder="First Name" id="name1" oninput="checkfn()">
+                        <input type="text" placeholder="Last Name" id="name2" oninput="checkln()" >
+                        </div>
+
+                        <div class="ernam">
+                            <div id="fn" ></div>
+                            <div id="ln"></div>
+                        </div>
+                    </div>
+                    <div class="mail">
+                        <h4>E-MAIL</h4>
+                        <input type="text" placeholder="Email" id="mail" oninput="checkmail()" onkeypress="">
+                        <div id="ermail">
+        
+                        </div>
+                    </div>
+                    <div class="gen" onmouseover="checkrad()">
+                        <h4>GENDER</h4>
+                        <input type="radio"  name="r1" id="r1">
+                        <label>Male</label>
+                        <input type="radio" name="r1" id="r2">
+                        <label>Female</label>
+                        <div id="errad">
+        
+                        </div>
+                    </div>
+                    <div class="ph">
+                        <h4>MOBILE NUMBER</h4>
+                        <input type="text" placeholder="Mobile Number" id="phone" oninput="checkphone()">
+                        <div id="erph">
+        
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="right">
+                    <div class="name">
+                        <h4>Counselling Subject</h4>
+                        <div class="n">
+                        <input type="text" placeholder="Counselling Topic" id="name3" oninput="checkfn()" required>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="msg">
+                        <h4>Address</h4>
+                        <textarea placeholder="Message" id="msg" oninput="checkmsg()"></textarea>
+                        <div id="ermsg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <center><input type="checkbox">
+                    <label>  I hereby Agree to Terms and Conditions *</label></center>
+                <br>
+                <div class="btn">
+                    <input type="submit" onclick="allfunc()">
+                </div>
+
+</div>            
+           
+           
+           
+                     
+        </form>
+    </div>
+    
+</body>
+</html>
