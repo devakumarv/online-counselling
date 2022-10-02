@@ -1,0 +1,51 @@
+ [
+    {
+        "tutorid" : "tutor1",
+        "firstname" : "Sowmiya",
+        "middlename" : null,
+        "lastname" : "A",
+        "email" : "sowmiya@gmail.com",
+        "dateofbirth" : "12-07-2001",
+        "workexp" : 4,
+        "mobilenum" : 9367290421,
+        "counsubject" : "Addiction",
+        "streetadd" : "1/2, Abcd",
+        "city" : "Chennai",
+        "state" : "Tamilnadu",
+        "country" : "India",
+        "pincode" :635122
+    },
+    {
+        "tutorid" : "tutor2",
+        "firstname" : "Meghana",
+        "middlename" : null,
+        "lastname" : "S",
+        "email" : "meghana@gmail.com",
+        "dateofbirth" : "18-08-2001",
+        "workexp" : 2,
+        "mobilenum" : 9763250027,
+        "counsubject" : "Student",
+        "streetadd" : "1/4, Efgh",
+        "city" : "Banglore",
+        "state" : "Karnataka",
+        "country" : "India",
+        "pincode" :535122
+    },
+    {
+        "tutorid" : "tutor3",
+        "firstname" : "Keerthy",
+        "middlename" : null,
+        "lastname" : "D",
+        "email" : "keerthy@gmail.com",
+        "dateofbirth" : "25-04-2001",
+        "workexp" : 1,
+        "mobilenum" : 9367290421,
+        "counsubject" : "Relationship",
+        "streetadd" : "3/15, Dfgh",
+        "city" : "Salem",
+        "state" : "Tamilnadu",
+        "country" : "India",
+        "pincode" :636422
+    }
+
+]

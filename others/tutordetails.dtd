@@ -1,0 +1,17 @@
+ <!ELEMENT tutors (tutor)>
+  <!ATTLIST tutors id ID #REQUIRED>
+  <!ELEMENT tutor (firstname,lastname,email,dateofbirth,workexp,mobilenum,counsubject,streetadd,city,state,country,pincode)>
+  <!ELEMENT firstname (#PCDATA)>
+  <!ELEMENT lastname (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT dateofbirth (#PCDATA)>
+  <!ATTLIST tutor gender (M|F) #REQUIRED>
+  <!ELEMENT workexp (#PCDATA)>
+  <!ELEMENT mobilenum (#PCDATA)>
+  <!ELEMENT counsubject (#PCDATA)>
+  <!ELEMENT streetadd (#PCDATA)>
+  <!ELEMENT city (#PCDATA)>
+  <!ELEMENT state (#PCDATA)>
+  <!ELEMENT country (#PCDATA)>
+  <!ELEMENT pincode (#PCDATA)>
+  <!ATTLIST tutor id ID #REQUIRED>

@@ -1,0 +1,11 @@
+ <!ELEMENT appointments (appointment)>
+  <!ATTLIST appointments id ID #REQUIRED>
+  <!ELEMENT appointment (firstname,lastname,email,date,time,message)>
+  <!ELEMENT firstname (#PCDATA) >
+  <!ELEMENT lastname (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT date (#PCDATA)>
+  <!ELEMENT time (#PCDATA)>
+  <!ATTLIST appointment gender (M|F) #REQUIRED>
+  <!ELEMENT message (#PCDATA)>
+  <!ATTLIST appointment id ID #REQUIRED>

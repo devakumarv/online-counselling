@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- external dtd -->
+<!DOCTYPE tutors SYSTEM "tutordetails.dtd">
+<?xml-model href="tutordetails.xsd"?>
+<tutors id="tutordet1"> <!-- xml -->
+    <tutor id="tutor1" gender="M" >
+      <firstname>abcd1</firstname>
+      <lastname>efgh1</lastname>
+      <email>devakumarv@hotmail.com</email>
+      <dateofbirth>2022-08-18</dateofbirth>
+      <workexp>4</workexp>
+      <mobilenum>9445686329</mobilenum>
+      <counsubject></counsubject>
+      <streetadd>1/87, Krishnagiri</streetadd>
+      <city>Krishnagiri</city>
+      <state>Tamilnadu</state>
+      <country>India</country>
+      <pincode>635122</pincode>
+    </tutor>
+</tutors>
