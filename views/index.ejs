@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="#" type="image/jpg">
+
+    <title>Online Counseling | The Fellowship</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/new.css" />
+    <link rel="stylesheet" type="text/css" href="css/card.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="logo"><span>The Fellowship </span>
+        <br/>
+        <p style="font-size: 20px;text-align:center;"><span class="yellow">Reveal to Heal</span></p>
+     </a>
+     <nav class="navbar">
+      <a href="/">Home</a>
+      <a href="contactus">Contact Us</a>
+      <a href="login">Login</a>
+      <a href="#"></a>
+     </nav>
+    
+     
+      <div class="hamburger">
+        <img src="images/grid-outline.svg" alt="" />
+      </div>
+    </header>
+    <br/><br/><br/>
+
+  <section class="services" id="timeline" style="background-color:antiquewhite;">
+      <div class="top">
+       <h3 style="font-size: 24px">Connect securely anytime, anywhere with 24/7 counsellors available just for you.</h3>
+        </div>
+ <div class="timeline">
+        <div class="cont cont-left">
+            <div class="image" style="background-image:url(images/1.svg);"></div>
+            <div class="content">
+                <h2>Choose your expert</h2>
+            </div>
+        </div>
+        <div class="cont cont-right">
+            <div class="image" style="background-image: url(images/2.svg);"></div>
+            <div class="content">
+                <h2>Discuss your concerns</h2>  
+            </div>
+        </div>
+        <div class="cont cont-left">
+            <div class="image" style="background-image:url(images/3.svg);"></div>
+            <div class="content">
+                <h2>Unleash a better you</h2> 
+            </div>
+        </div>
+    </div>
+    </section>
+    <div>
+       <h1 style="text-align: center; margin-top:1rem; margin-bottom:1rem; ">Our Counsellors</h1>
+       <br/>
+       <div class="m-4" >
+        <div class="row row-cols-1 row-cols-md-2 g-4" style="justify-content:space-evenly;">
+          <%tutorList.forEach(tutor => {%>
+            <div class="card" style="width: 300px;">
+              <img src="<%= tutor.photo %>" class="card-img-top" alt="Sample Image">
+              <div class="card-body text-center">
+               <p class="card-title" style="font-size: 24px; line-height: 2;"><b><%= tutor.name %></b></p> 
+               <p class="card-text" style="font-size: 18px; line-height: 1.5;">Expertise : <%= tutor.expertise %> <br/>
+                     Rating : 
+                     <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span> <br/>
+                     Fee(in $) / min : <%= tutor.fee %></p>
+                     <br/>
+                     <center>
+                      <button style="padding: 8px; background-color:#2B4F81; border-radius: 9px; color: whitesmoke; " name="appointmentbutton"><a href="/appointment/<%= tutor._id %>" style="text-decoration: none; color: whitesmoke;">Book Now</a></button>
+                    </center>
+                   
+                    </div>
+          </div>
+          <%})%>
+          </div>
+            </div>
+            <br/>
+            <br/>
+   <br/><br/><br/>
+   <section class="services" id="timeline1" style="background-color:antiquewhite;">
+    <h1 style="text-align: center; margin-top:1rem; margin-bottom:1rem; ">Browse by category</h1><br/> <br/> 
+    <div class="bottom">
+      <a href="counsellingforstudents"><div class="box" style="background-image: url('images/cfs.png');background-repeat: no-repeat;  background-size: cover;">
+        <h4> Counselling for Students
+         </h4>
+<br/><br/><br/><br/><br/><br/><br/>      
+      </div></a>
+      <a href="drugaddiction"><div class="box" style="background-image: url('images/drug.png');background-repeat: no-repeat;  background-size: cover;">
+        <h4> Drug Addiction
+          </h4>
+<br/><br/><br/><br/><br/><br/><br/> 
+      </div></a>
+      <a href="internetaddiction"> <div class="box" style="background-image: url('images/internet.png');background-repeat: no-repeat;  background-size: cover;">
+        <h4>Internet Addiction
+          </h4>
+<br/><br/><br/><br/><br/><br/><br/>      
+      </div></a>
+      <a href="careercounselling"><div class="box" style="background-image: url('images/carre.png');background-repeat: no-repeat;  background-size: cover;">
+        <h4>Career Counselling
+          </h4>
+<br/><br/><br/><br/><br/><br/><br/> 
+      </div></a>
+      <a href="angermanagement"> <div class="box" style="background-image: url('images/anger.png');background-repeat: no-repeat;  background-size: cover;">
+        <h4>Anger Management
+          </h4>
+<br/><br/><br/><br/><br/><br/><br/>      
+      </div></a>
+      <a href="childdevelopment"><div class="box" style="background-image: url('images/childdev.png');background-repeat: no-repeat;  background-size: cover;">
+        <h4>Child Development</h4>
+<br/><br/><br/><br/><br/><br/><br/> 
+      </div></a>
+       
+      </div>
+  </section>
+       </div>
+
+    <!-- Footer-->
+    <footer class="footer">
+      <div class="bottom">
+      
+       <div class="rowxx">
+       
+              <div>
+              <a href="feedback" style="text-decoration: none;"><h3>Feedback</h3></a><br/>
+              <a href="tutordetails" style="text-decoration: none;"><h3>Join as</h3>
+                <h3>Expert</h3></a><br/>
+              <a href="about" style="text-decoration: none;"><h3>About Us</h3></a></div><br/>
+              <div>
+              <h2><a href="https://www.instagram.com/change" style="color: black; text-decoration: none;" class="fa fa-instagram" aria-hidden="true" ></a></h2><br/>
+              <h2><a href="https://www.twitter.com/change" style="color: black;  text-decoration: none;" class="fa fa-twitter" aria-hidden="true" ></a></h2><br/>
+              <h2><a href="https://www.facebook.com/change" style="color: black;  text-decoration: none;" class="fa fa-facebook" aria-hidden="true" ></a></h2><br/>
+            </div>
+      <br/>
+              <div style="text-align: center;">
+                <br/>
+                <button id="top">
+                  <i class="material-icons">arrow_upward</i>
+                </button>
+                <br><br>
+                <h3>Back to Top</h3>
+              </div>
+            </div>
+      </div>
+      <div class="bottom" style="justify-content: center;">
+      <p>Copyright © 2022 Devakumar. All rights reserved.</p>
+      <br/>
+  
+    
+</div>
+<div class="bottom">
+  <a style="text-decoration:none;" href="adminlogin"><b>Admin</b></a>
+</div>
+    </footer>
+
+    <!-- Go To Top -->
+    <div class="scroll-top">
+      <img src="images/arrow-up-outline.svg" alt="" />
+    </div>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+          const Top=document.getElementById("top");
+      Top.addEventListener("click",function () {
+        window.scrollTo({
+          top:0,
+          left:0,
+          behavior:'smooth'
+        });
+      });
+    </script>
+
+  </body>
+</html>
