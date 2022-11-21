@@ -1,2 +1,2 @@
-# online-counselling
+# The Fellowship | Online Professional Counselling Website
 A Professional Online Counselling app developed with MEAN Stack...
